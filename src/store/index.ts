@@ -1,15 +1,15 @@
 import { createStore } from 'vuex';
-interface IState {
+export interface IStoreState {
     user: string //用户的邮箱
 }
 const store = createStore({
-    state(): IState {
+    state(): IStoreState {
         return {
             user: ''
         }
     },
     mutations: {
-        setUser(state: IState, user: string) {
+        setUser(state: IStoreState, user: string) {
             state.user = user;
         }
     }

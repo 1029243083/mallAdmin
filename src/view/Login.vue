@@ -132,6 +132,7 @@ export default defineComponent({
           // 登录成功跳转 保存信息到vuex
           store.commit("setUser", email.value);
           router.push('/')
+          password.value = '';
         } else {
           message.success(res.data.msg);
         }
